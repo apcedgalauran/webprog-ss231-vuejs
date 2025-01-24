@@ -78,5 +78,10 @@
 </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: 'PersonalProfile',
+};
+</script>
+
 <style></style>
