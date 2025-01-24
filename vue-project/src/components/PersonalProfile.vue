@@ -1,0 +1,148 @@
+<template>
+  <div class="container">
+    <header>
+        <h1>Personal Profile Web Page</h1>
+    </header>
+    <main>
+        <section class="main-content">
+            <div>
+                <strong>About Me</strong>
+                <br>I'm a second-year CS student at Asia Pacific College, and overall just a chill guy.
+            </div>
+            <div>
+                <strong>Education</strong>
+                <br>My secondary studies were at Las Piñas City National Science High School, where I became a national champion in journalism.
+            </div>
+            <div>
+                <strong>Course</strong>
+                <br>I'm studying Computer Science with a specialization in Software and Systems.
+            </div>
+            <div>
+                <strong>IT Experience</strong>
+                <br>My college studies include learning Java and Python.
+            </div>
+            <div>
+                <strong>Hobbies</strong>
+                <ul>
+                    <li>Playing the guitar</li>
+                    <li>Playing sports like basketball and volleyball</li>
+                    <li>Playing online games like Valorant</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Goal</strong>
+                <br>My goal is to achieve financial freedom.
+            </div>
+            <div>
+                <strong>Favorite Video</strong>
+                <br><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Here is my favorite video of all time!</a>
+            </div>
+            <div>
+                <strong>Valorant Skills</strong>
+                <br>
+                <table>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Proficiency</th>
+                    </tr>
+                    <tr>
+                        <td>Shooting</td>
+                        <td>Pro</td>
+                    </tr>
+                    <tr>
+                        <td>Strafe</td>
+                        <td>Pro</td>
+                    </tr>
+                    <tr>
+                        <td>Tracking</td>
+                        <td>Pro</td>
+                    </tr>
+                    <tr>
+                        <td>Game Sense</td>
+                        <td>Pro</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <aside class="sidebar">
+            <strong>Picture Gallery</strong>
+            <br>
+            <img src="462553918_3997388743822653_4814874926446819363_n.jpg" alt="Image 1">
+            <img src="eze3.jfif" alt="Image 2">
+            <img src="eze2.jpg" alt="Image 3">
+        </aside>
+    </main>
+    <footer>
+        Asia Pacific College
+    </footer>
+</div>
+  
+
+
+<div id="app">
+  {{ message }} <br>
+  {{'Random number: ' + Math.ceil(Math.random()*6) }}
+  <div v-bind:class="vueClass">This element is bound to the "pinkBG" class.
+  </div>
+</div>
+ 
+<div id="app2">
+  <div>
+  <figure v-for="x in manyFoods">
+  <img v-bind:src="x.url">
+  <figcaption>{{ x.name }}</figcaption>
+  </figure>
+  </div>
+  </div>
+
+  <div id="app3">
+    <form v-on:submit.prevent="addItem">
+    <p>
+          What do you need? <br>
+    <input type="text" required placeholder="item name.." v-model="itemName">
+    </p>
+    <p>
+          How many? <br>
+    <input type="number" placeholder="number of items.." v-model="itemNumber">
+    </p>
+    <p>
+          Important?
+    <label>
+    <input type="checkbox" v-model="itemImportant">
+            {{ itemImportant }}
+    </label>
+    </p>
+    <button type="submit">Add item</button>
+    </form>
+    <br>
+    <hr>
+     
+      <div>
+    <p><strong>Shopping list:</strong></p>
+    <ul id="ulToFind">
+    <li 
+            v-for="item in shoppingList" 
+            v-bind:class="{ impClass: item.important }"
+            v-on:click="item.found=!item.found"
+            v-show="!item.found">
+              {{ item.name }}, {{ item.number}}
+    </li>
+    </ul>
+    <ul id="ulFound">
+    <li 
+            v-for="item in shoppingList" 
+            v-bind:class="{ impClass: item.important }"
+            v-on:click="item.found=!item.found"
+            v-show="item.found">
+              {{ item.name }}, {{ item.number}}
+    </li>
+    </ul>
+    </div>
+    </div>
+</template>
+     
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/images.js"></script>
+<script src="js/shopping.js"></script>
+
