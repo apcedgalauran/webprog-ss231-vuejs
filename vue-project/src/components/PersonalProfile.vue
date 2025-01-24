@@ -1,3 +1,4 @@
+<template>
 <div class="container">
     <header>
         <h1>Personal Profile Web Page</h1>
@@ -75,3 +76,7 @@
         Asia Pacific College
     </footer>
 </div>
+</template>
+
+<script></script>
+<style></style>
