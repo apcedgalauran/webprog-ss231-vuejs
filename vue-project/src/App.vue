@@ -27,6 +27,4 @@ onMounted(() => {
   <food-item2/> <br>
 </template>
 
-<script></script>
-
 <style></style>
