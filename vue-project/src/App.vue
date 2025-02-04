@@ -1,4 +1,5 @@
-  <h1>Food</h1>
+<template>
+<h1>Food</h1>
   <personal-profile /> <br />
   <country/> <br/>
   <food-item /> <br />
